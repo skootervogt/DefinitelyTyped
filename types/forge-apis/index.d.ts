@@ -179,9 +179,15 @@ export interface JobPayloadOutput {
     formats: JobPayloadItem[];
 }
 
+export interface JobPayloadMisc {
+    workflow: string;
+    workflowAttribute: object;
+}
+
 export interface JobPayload {
     input: JobPayloadInput;
     output: JobPayloadOutput;
+    misc: JobPayloadMisc;
 }
 
 export class CommandsApi {
